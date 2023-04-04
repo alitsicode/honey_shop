@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block title %}{% trans "logout" %}{% endblock title %}
+
+{% block content %}
+    <div class="container mb-5 mt-5">
+        <div class="row">
+            <div class="col-md-10 text-center">
+                <h1 class='text-white bg-danger rounded-pill'>{% trans "Logout Page !" %}</h1>
+                <form action="" method='POST' class='mt-5'>
+                    {% csrf_token %}
+                    <h3 class='mb-2'>{% trans "are you sure to logout?" %}</h3>
+                    <button class='btn btn-danger px-5 rounded-pill' type='submit'><span class='h4'>{% trans "logout" %}</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
