@@ -1,309 +1,336 @@
-{% extends 'base.html' %}
-{% load static %}
+{% extends 'base.html' %} 
+{% load static %} 
+{% load i18n %}
+{% block title%}honey shop | brand name{% endblock title %} 
 
-{% block title %}honey shop | brand name{% endblock title %}
 {% block content %}
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="{% static 'images/slider/s1.jpg' %}" class="d-block w-100" alt="...">
-        <div class="carousel-caption   d-md-block">
-            <div class="row">
-                 <div class="col-lg-6 text-start ">
-                    <h1 class="fs-12 fw-bolder text-start ">عسل طبیعی <br><span class="text-primary">فروشگاه انلاین</span> </h1> 
-                    <p class="text-dark d-none d-md-block text-start">ما در این فروشگاه انواع و اقسام عسل و محصولاتی بر پایه عسل را به شما ارائه میدهیم </p>
-                    <div class="d-inline-block pt-5 text-start d-none d-lg-block">
-                        <button class=" bmt btn btn-primary shadow fs-5 fw-bolder px-5 py-2">رفتن به فروشگاه</button>
-                        <!-- <button class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
-                    </div>
-                 </div>
-                 <div class="col-lg-6 d-none d-lg-block">
-                     <img class="w-100" src="{% static 'images/h2.png' %}" alt="">
-                 </div>
-            </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="{% static 'images/slider/s2.jpg' %}" class="d-block w-100" alt="...">
-        <div class="carousel-caption  d-md-block">
-            <div class="row">
-                 <div class="col-lg-6">
-                    <h1 class="fs-12 fw-bolder text-start">Organic Honey <br><span class="text-primary">online shop</span> </h1> 
-                    <p class="d-none d-md-block text-dark text-start">There are many different varieties of flower honey available… Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac laoreet lacus. Morbi auctor quam tempus massa vestibulum aliquet eu vitae ligula.</p>
-                    <div class="d-inline-block pt-5 text-start d-none d-lg-block">
-                        <!-- <button class="btn btn-primary shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
-                        <button class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Buy Now</button>
-                    </div>
-                 </div>
-                 <div class="col-lg-6 d-none d-lg-block">
-                     <img class="w-100" src="{% static 'images/h3.png' %}" alt="">
-                 </div>
-                  
-            </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"><i class="bi fs-4 text-dark bi-chevron-left"></i></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"><i class="bi fs-4 text-dark bi-chevron-right"></i></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
   </div>
-  
-  <!-- ##################### Why Choos US #################### -->
-   <div class="container-fluid products big-padding pt-3">
-     <div class="container-xl">
-         <div class="section-title row">
-              <h2 class="fs-1 fw-bold">چرا عسل های ما</h2>
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد..</p>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img
+        src="{% static 'images/slider/s1.jpg' %}"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-md-block">
+        <div class="row">
+          <div class="col-lg-6 text-start">
+            <h1 class="fs-12 fw-bolder text-start">
+              عسل طبیعی <br /><span class="text-primary">فروشگاه انلاین</span>
+            </h1>
+            <p class="text-dark d-none d-md-block text-start">
+              ما در این فروشگاه انواع و اقسام عسل و محصولاتی بر پایه عسل را به
+              شما ارائه میدهیم
+            </p>
+            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+              <button
+                class="bmt btn btn-primary shadow fs-5 fw-bolder px-5 py-2"
+              >
+                رفتن به فروشگاه
+              </button>
+              <!-- <button class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
+            </div>
           </div>
-         <div class="row mt-5">
-             <div class="col-lg-3 mb-4 col-md-6">
-                 <div class="cover text-center">
-                     <img class="w-125" src="{% static 'images/icon/honeycomb.png' %}" alt="">
-                     <h2 class="fs-3 fw-bolder mt-4">عسل طبیعی</h2>
-                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                 </div>
-             </div>
-             <div class="col-lg-3 mb-4 col-md-6">
-                 <div class="cover text-center">
-                     <img class="w-125" src="{% static 'images/icon/bee.png' %}" alt="">
-                     <h2 class="fs-3 fw-bolder mt-4">ملکه زنبور عسل</h2>
-                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                 </div>
-             </div>
-             <div class="col-lg-3 mb-4 col-md-6">
-                 <div class="cover text-center">
-                     <img class="w-125" src="{% static 'images/icon/honey.png' %}" alt="">
-                     <h2 class="fs-3 fw-bolder mt-4">بسته بندی بهداشتی </h2>
-                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                 </div>
-             </div>
-             <div class="col-lg-3 mb-4 col-md-6">
-                 <div class="cover text-center">
-                     <img class="w-125" src="{% static 'images/icon/fast.png' %}" alt="">
-                     <h2 class="fs-3 fw-bolder mt-4">تحویل سریع </h2>
-                     <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. </p>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
-  
-  
-   <!-- ##################### Our Products Starts Here #################### -->
- <div class="container-fluid products big-padding px-3 bg-honey">
-     <div class="container-xl">
-         <div class="section-title row">
-              <h2 class="fs-1 fw-bold">محصولات ما</h2>
-              <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img class="w-100" src="{% static 'images/h2.png' %}" alt="" />
           </div>
-         <div class="row">
-             <div class="col-lg-3 col-md-4 mb-4">
-                 <a href="detail.html">
-                 <div class="product bg-white p-4 text-center shadow-md">
-                     <img src="{% static 'images/products/p1.png' %}" alt="">
-                      <div class="d-inline-block">
-                         <h4 class="fw-bolder fs-5 mt-4">عسل نوع 1</h4>
-                         <span class="fw-bolder fs-4">85000 T</span> <del class="text-danger text-decoration-line-through">100000 T</del>
-                     </div>
-                     <div class="d-inline-block mt-3">
-                         <button class="btn btn-primary px-5">خرید</button>
-                     </div>
-                     
-                 </div>
-                 </a>
-             </div>
-             <div class="col-lg-3 col-md-4 mb-4">
-                 <a href="detail.html">
-                 <div class="product bg-white p-4 text-center shadow-md">
-                     <img src="{% static 'images/products/p2.png' %}" alt="">
-                      <div class="d-inline-block">
-                         <h4 class="fw-bolder fs-5 mt-4">عسل نوع 2</h4>
-                         <span class="fw-bolder fs-4">85000 T</span> <span class="text-danger text-decoration-line-through">100000 T</span>
-                     </div>
-                     <div class="d-inline-block mt-3">
-                         <button class="btn btn-primary px-5">خرید</button>
-                     </div>
-                     
-                 </div>
-                 </a>
-             </div>
-             <div class="col-lg-3 col-md-4 mb-4">
-                 <a href="detail.html">
-                 <div class="product bg-white p-4 text-center shadow-md">
-                     <img src="{% static 'images/products/p3.png' %}" alt="">
-                      <div class="d-inline-block">
-                         <h4 class="fw-bolder fs-5 mt-4">عسل نوع 3</h4>
-                         <span class="fw-bolder fs-4">85000 T</span> <span class="text-danger text-decoration-line-through">100000 T</span>
-                     </div>
-                     <div class="d-inline-block mt-3">
-                         <button class="btn btn-primary px-5">خرید</button>
-                     </div>
-                     
-                 </div>
-                 </a>
-             </div>
-             <div class="col-lg-3 col-md-4 mb-4">
-                 <a href="detail.html">
-                 <div class="product bg-white p-4 text-center shadow-md">
-                     <img src="{% static 'images/products/p4.png' %}" alt="">
-                      <div class="d-inline-block">
-                         <h4 class="fw-bolder fs-5 mt-4">عسل نوع 4</h4>
-                         <span class="fw-bolder fs-4">85000 T</span> <span class="text-danger text-decoration-line-through">100000 T</span>
-                     </div>
-                     <div class="d-inline-block mt-3">
-                         <button class="btn btn-primary px-5">خرید</button>
-                     </div>
-                     
-                 </div>
-                 </a>
-             </div>
-         </div>
-     </div>
- </div>
- 
- 
-  
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img
+        src="{% static 'images/slider/s2.jpg' %}"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-md-block">
+        <div class="row">
+          <div class="col-lg-6">
+            <h1 class="fs-12 fw-bolder text-start">
+              Organic Honey <br /><span class="text-primary">online shop</span>
+            </h1>
+            <p class="d-none d-md-block text-dark text-start">
+              There are many different varieties of flower honey available…
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+              laoreet lacus. Morbi auctor quam tempus massa vestibulum aliquet
+              eu vitae ligula.
+            </p>
+            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+              <!-- <button class="btn btn-primary shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
+              <button
+                class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-6 d-none d-lg-block">
+            <img class="w-100" src="{% static 'images/h3.png' %}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"
+      ><i class="bi fs-4 text-dark bi-chevron-left"></i
+    ></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#carouselExampleIndicators"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"
+      ><i class="bi fs-4 text-dark bi-chevron-right"></i
+    ></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- ##################### Why Choos US #################### -->
+<div class="container-fluid products big-padding pt-3">
+  <div class="container-xl">
+    <div class="section-title row">
+      <h2 class="fs-1 fw-bold">چرا عسل های ما</h2>
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
+        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+        سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
+        متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
+        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
+        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
+        خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
+        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
+        رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
+        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد..
+      </p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-3 mb-4 col-md-6">
+        <div class="cover text-center">
+          <img
+            class="w-125"
+            src="{% static 'images/icon/honeycomb.png' %}"
+            alt=""
+          />
+          <h2 class="fs-3 fw-bolder mt-4">عسل طبیعی</h2>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4 col-md-6">
+        <div class="cover text-center">
+          <img class="w-125" src="{% static 'images/icon/bee.png' %}" alt="" />
+          <h2 class="fs-3 fw-bolder mt-4">ملکه زنبور عسل</h2>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4 col-md-6">
+        <div class="cover text-center">
+          <img
+            class="w-125"
+            src="{% static 'images/icon/honey.png' %}"
+            alt=""
+          />
+          <h2 class="fs-3 fw-bolder mt-4">بسته بندی بهداشتی</h2>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4 col-md-6">
+        <div class="cover text-center">
+          <img class="w-125" src="{% static 'images/icon/fast.png' %}" alt="" />
+          <h2 class="fs-3 fw-bolder mt-4">تحویل سریع</h2>
+          <p>
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ##################### Our Products Starts Here #################### -->
+<div class="container-fluid products big-padding px-3 bg-honey">
+  <div class="container-xl">
+    <div class="section-title row">
+      <h2 class="fs-1 fw-bold">{% trans "our product" %}</h2>
+    </div>
+    <div class="row">
+      {% for product in last_product %}
+      <div class="col-lg-3 col-md-4 mb-4">
+        <a href="{% url 'product_detail' product.id %}">
+          <div class="product bg-white p-4 text-center shadow-md">
+            <img class='rounded' src="{{product.image.url}}" alt="{{product.title}} photo" />
+            <div class="">
+              <h4 class="fw-bolder fs-5 mt-4">{{product.title}}</h4>
+              {% if product.is_discount %}
+              <span class="fw-bolder fs-4"
+                >{{product.price_with_discount}}</span
+              >
+              <del class="text-danger text-decoration-line-through"
+                >{{product.price}}</del
+              >
+              {% else %}
+              <span class="fw-bolder fs-4">{{product.price_with_discount}}</span
+              ><br />
+              {% endif %}
+            </div>
+            <span class="fw-bolder fs-6"
+              >category : {{product.category.first.title}}</span
+            ><br />
+            <div class="d-inline-block mt-3">
+              <button class="btn btn-primary px-5">{% trans "more" %}</button>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 <!-- ******************** About US Starts Here ******************* -->
 
 <div class="about-us big-padding">
-<div class="container-lg">
-  <div class="section-title">
-      <h2>درباره ی فروشگاه ما</h2>
-  </div>
-  <div class="about-row row">
+  <div class="container-lg">
+    <div class="section-title">
+      <h2>{% trans "about our shop" %}</h2>
+    </div>
+    <div class="about-row row">
       <div class="col-md-7">
-          <div class="abut-detail fs-6">
-               
-              <p class="mb-3">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها </p>
-               <p class="mb-3"> لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها</p>
-                <p class="mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها </p>
-          </div>
-         
-
-          
+        <div class="abut-detail fs-6">
+          <p class="mb-3">{{about.description|truncatewords:40|linebreaks}}</p>
+        </div>
       </div>
       <div class="col-md-5">
-          <img src="{% static 'images/h2.png' %}" alt="">
+        <img class='rounded' src="{{about.image.url}}" alt="{{about.title}} cover" />
       </div>
+    </div>
   </div>
 </div>
+
+<div id="testimonial" class="service bg-honey container-fluid px-4 py-5">
+  <div class="container">
+    <div class="section-title row mb-3">
+      <h2 class="fw-bolder">{% trans "categories" %}</h2>
+    </div>
+    <div class="row mt-5">
+      {% for category in categories %}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <a href="{% url 'product_category' category.id %}">
+            <div class="product bg-white p-4 text-center shadow-md">
+              <img class='rounded' src="{{category.image.url}}" alt="{{category.title}} photo" />
+              <div class="">
+                <h4 class="fw-bolder fs-5 mt-4">{{category.title}}</h4>
+                <span>{{category.short_description}}</span>
+              </div>
+              <div class="d-inline-block mt-3">
+                <button class="btn btn-primary px-5">{% trans "more" %}</button>
+              </div>
+            </div>
+          </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>
 
+<!--########################## Blog Starts Here ############################# -->
 
-   <div id="testimonial" class="service bg-honey container-fluid px-4 py-5">
-      <div class="container">
-          
-     
-       <div class="section-title row mb-3">
-          <h2 class="fw-bolder">فروشنده ها </h2>
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+<div id="blog" class="service container-fluid px-4 bg-white py-5">
+  <div class="container">
+    <div class="section-title row mb-3">
+      <h2 class="fw-bolder">وبلاگ</h2>
+      <p>
+        ما روزانه مقالاتی درباره عسل و اطلاعاتی که ممکن است ندانید برایتان قرار
+        میدهیم تا با اطلاعات بیشتری عسل خود را انتخاب کنید.
+      </p>
+    </div>
+    <div class="row mt-5">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="serv-cove rounded bg-white p-2">
+          <img src="{% static 'images/blog/b1.jpg' %}" alt="" />
+          <div class="p-2">
+            <h5 class="mt-3 fs-7 fw-bold">عسل ترند در دنیا 10</h5>
+            <span class="fs-8">پنج روز پیش </span>
+            <span class="float-end fs-8"
+              ><i class="bi bi-person"></i> نویسنده 1</span
+            >
+          </div>
+        </div>
       </div>
-      <div class="row mt-5">
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove shadow-md rounded bg-white p-3">
-                  <div class="prf row mb-3">
-                      <div class="col-3">
-                          <img class="rounded-pill" src="{% static 'images/testimonial/member-01.jpg' %}" alt="">
-                      </div>
-                      <div class="col-9 align-self-center">
-                          <h6 class="mb-0 fw-bolder">فروشنده 1</h6>
-                          <!-- <span>CEO Fabric Nation</span -->
-                      </div>
-                  </div>
-                  <div class="det text-center">
-                      <p class="fs-7 fst-italic">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد </p>
-                  </div>
-             </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="serv-cove rounded bg-white p-2">
+          <img src="{% static 'images/blog/b2.jpg' %}" alt="" />
+          <div class="p-2">
+            <h5 class="mt-3 fs-7 fw-bold">عسل هایی با بیشترین خواص دارویی</h5>
+            <span class="fs-8">دو ماه پیش</span>
+            <span class="float-end fs-8"
+              ><i class="bi bi-person"></i> نویسنده 2</span
+            >
           </div>
-          
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove shadow-md rounded bg-white p-3">
-                  <div class="prf row mb-3">
-                      <div class="col-3">
-                          <img class="rounded-pill" src="{% static 'images/testimonial/member-03.jpg' %}" alt="">
-                      </div>
-                      <div class="col-9 align-self-center">
-                          <h6 class="mb-0 fw-bolder">فروشنده 2</h6>
-                          <!-- <span>CEO Notitech</span> -->
-                      </div>
-                  </div>
-                  <div class="det text-center">
-                      <p class="fs-7 fst-italic">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد  </p>
-                  </div>
-             </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove shadow-md rounded bg-white p-3">
-                  <div class="prf row mb-3">
-                      <div class="col-3">
-                          <img class="rounded-pill" src="{% static 'images/testimonial/member-02.jpg' %}" alt="">
-                      </div>
-                      <div class="col-9 align-self-center">
-                          <h6 class="mb-0 fw-bolder">فروشنده 3</h6>
-                          <!-- <span>Admin Vintech</span> -->
-                      </div>
-                  </div>
-                  <div class="det text-center">
-                      <p class="fs-7 fst-italic">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد  </p>
-                  </div>
-             </div>
-          </div>
-           
+        </div>
       </div>
-       </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="serv-cove rounded bg-white p-2">
+          <img src="{% static 'images/blog/b4.jpg' %}" alt="" />
+          <div class="p-2">
+            <h5 class="mt-3 fs-7 fw-bold">مرغول ترین نوع عسل در دنیا</h5>
+            <span class="fs-8">یک سال پیش</span>
+            <span class="float-end fs-8"
+              ><i class="bi bi-person"></i> نویسنده 3</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  
-   <!--########################## Blog Starts Here ############################# -->
-  
-  <div id="blog" class="service container-fluid px-4 bg-white py-5">
-      <div class="container">
-       <div class="section-title row mb-3">
-          <h2 class="fw-bolder">وبلاگ</h2>
-          <p>ما روزانه مقالاتی درباره عسل  و اطلاعاتی که ممکن است ندانید برایتان قرار میدهیم تا با اطلاعات بیشتری عسل خود را انتخاب کنید.</p>
-      </div>
-      <div class="row mt-5">
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove rounded bg-white p-2">
-                  <img src="{% static 'images/blog/b1.jpg' %}" alt="">
-                  <div class="p-2">
-                      <h5 class="mt-3 fs-7 fw-bold">عسل ترند در دنیا 10</h5>
-                      <span class="fs-8">پنج روز پیش </span>
-                      <span class="float-end fs-8"><i class="bi bi-person"></i> نویسنده 1</span>
-                  </div>
-             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove rounded bg-white p-2">
-                  <img src="{% static 'images/blog/b2.jpg' %}" alt="">
-                  <div class="p-2">
-                      <h5 class="mt-3 fs-7 fw-bold">عسل هایی با بیشترین خواص دارویی</h5>
-                      <span class="fs-8">دو ماه پیش</span>
-                      <span class="float-end fs-8"><i class="bi bi-person"></i> نویسنده 2</span>
-                  </div>
-             </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-4">
-             <div class="serv-cove rounded bg-white p-2">
-                  <img src="{% static 'images/blog/b4.jpg' %}" alt="">
-                  <div class="p-2">
-                      <h5 class="mt-3 fs-7 fw-bold">مرغول ترین نوع عسل در دنیا</h5>
-                      <span class="fs-8">یک سال پیش</span>
-                      <span class="float-end fs-8"><i class="bi bi-person"></i> نویسنده 3</span>
-                  </div>
-             </div>
-          </div>
-          </div>
-      </div>
-  </div>
+</div>
 {% endblock content %}

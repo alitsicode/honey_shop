@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{product.title}}{% endblock title %}
+
+{% block content %}
+<!--  ************************* Page Title Starts Here ************************** -->
+ <div class="page-nav no-margin row">
+        <div class="container">
+            <div class="row">
+                <h2 class="text-start">{{product.title}} </h2>
+                <a class='text-start' href="{% url 'product_category' product.id %}">{% trans "category" %} :<span class='text-danger '> {{product.category.first.title}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+<!--####################### Product Detail Starts Here ###################-->
+<div class="container-fluid big-padding bg-white about-cover">
+    <div class="container">
+        <div class="row about-row">
+            <div class="col-md-5 p-5 text-center">
+                <img style='border-radius:10px;' src="{{product.image.url}}" alt="{{product.title}} photo">
+            </div>
+            <div class="col-md-7">
+                {% if product.is_exist %}
+                    <h2>{{product.title}}</h2>
+                {% else %}
+                    <h2>{% trans "out of exist !" %}</h2>
+                {% endif %}
+                {% if product.is_discount %}
+                    <strong class="fs-3 py-4 text-danger"> {% trans "$" %}{{product.price_with_discount}} </strong>
+                    <span class="fs-5 ps-3 text-decoration-line-through">{% trans "$" %}{{product.price}}</span>
+                {% else %}
+                    <span class="fs-5 ps-3">{% trans "$" %}{{product.price}}</span>
+                {% endif %}
+                 <ul class="mt-0 mt-2 mb-3 vgth">
+                    <li class="float-end gvi">
+                        <i class="bi text-danger bi-heart-fill"></i>
+                    </li>
+                </ul>
+                {% if product.properties %}
+                <h4>( {% trans "product properties" %} )</h4>
+                <ul class="key-features mt-4">
+                    <li>{{product.properties|linebreaks}}</li>
+                </ul>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row product-detail">
+           <h4>( {% trans "Product Detail" %} )</h4>
+            <p>{{product.description|linebreaks}}</p>
+        </div>
+        <div class="row review mt-5">
+            <div class="col-md-8">
+                 <h4>{% trans "Product comments" %}</h4>
+                 <div class="row m-0 reviewrow p-3 px-0 border-bottom">
+                    <div class="col-md-12 align-items-center col-9 rcolm"> 
+                        <div class="review">
+                            <li class="col-8 ratfac">
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                             </li>              
+                        </div>
+                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
+
+                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
+                        </h3>
+
+                        <div class="review-text">
+                             Aliquam laoreet nulla ac metus mattis viverra. Fusce hendrerit, augue eget hendrerit pellentesque, lorem nulla condimentum massa, efficitur pellentesque tortor sapien sed lectus
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+
+                <div class="row m-0 reviewrow p-3 px-0 border-bottom">
+                    <div class="col-md-12 align-items-center col-9 rcolm"> 
+                        <div class="review">
+                            <li class="col-8 ratfac">
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                             </li>              
+                        </div>
+                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
+
+                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
+                        </h3>
+
+                        <div class="review-text">
+                            consectetur adipiscing elit. Nunc eget lectus imperdiet, scelerisque nunc id, pharetra metus.
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+
+                <div class="row m-0 reviewrow px-0">
+                    <div class="col-md-12 align-items-center col-9 rcolm"> 
+                        <div class="review">
+                            <li class="col-8 ratfac">
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi text-warning bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                                 <i class="bi bi-star-fill"></i>
+                             </li>              
+                        </div>
+                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
+
+                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
+                        </h3>
+
+                        <div class="review-text">
+                            Great work, keep it up
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,124 @@
+<!--  ************************* Page Title Starts Here ************************** -->
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{% trans "about us" %}{% endblock title %}
+
+{% block content %}
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-start">{% trans "About Our Company" %}</h2>
+        </div>
+    </div>
+</div>
+
+<!-- ******************** About US Starts Here ******************* -->
+
+<div class="about-us big-padding">
+    <div class="container-lg">
+        <div class="about-row row">
+            <div class="col-md-7">
+                <div class="abut-detail fs-6">
+                    <p class="mb-3">
+                        {{informations.description|linebreaks}}
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <img src="{{informations.image.url}}" alt="informations image" />
+            </div>
+        </div>
+  </div>
+</div>
+
+<div id="testimonial" class="service bg-honey container-fluid px-4 py-5">
+    <div class="container">
+        <div class="section-title row mb-3">
+            <h2 class="fw-bolder">{% trans "Our Honey Types" %}</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum
+                sit nibh amet egestas tellus.
+            </p>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="serv-cove shadow-md rounded bg-white p-3">
+                    <div class="prf row mb-3">
+                        <div class="col-3">
+                            <img
+                            class="rounded-pill"
+                            src="{% static 'images/testimonial/member-01.jpg' %}"
+                            alt=""
+                            />
+                        </div>
+                        <div class="col-9 align-self-center">
+                            <h6 class="mb-0 fw-bolder">Vinoth Parkash</h6>
+                            <span>CEO Fabric Nation</span>
+                        </div>
+                    </div>
+                    <div class="det text-center">
+                        <p class="fs-7 fst-italic">
+                            Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
+              Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
+              Nam ornare felis ut arcu tristique luctus. Curabitur
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="serv-cove shadow-md rounded bg-white p-3">
+        <div class="prf row mb-3">
+            <div class="col-3">
+                <img
+                class="rounded-pill"
+                src="{% static 'images/testimonial/member-03.jpg' %}"
+                alt=""
+                />
+            </div>
+            <div class="col-9 align-self-center">
+                <h6 class="mb-0 fw-bolder">Jackson Daniel</h6>
+                <span>CEO Notitech</span>
+            </div>
+        </div>
+        <div class="det text-center">
+            <p class="fs-7 fst-italic">
+                Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
+                Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
+                Nam ornare felis ut arcu tristique luctus. Curabitur
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="serv-cove shadow-md rounded bg-white p-3">
+        <div class="prf row mb-3">
+            <div class="col-3">
+                <img
+                class="rounded-pill"
+                src="{% static 'images/testimonial/member-02.jpg' %}"
+                alt=""
+                />
+            </div>
+            <div class="col-9 align-self-center">
+                <h6 class="mb-0 fw-bolder">Praveen Thaney</h6>
+                <span>Admin Vintech</span>
+            </div>
+        </div>
+        <div class="det text-center">
+            <p class="fs-7 fst-italic">
+                Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
+                Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
+                Nam ornare felis ut arcu tristique luctus. Curabitur
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock content %}

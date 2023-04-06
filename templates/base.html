@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,6 +46,20 @@
         font-family: "lalezar";
         font-size: 17px;
       }
+      .pro-search {
+        background-color:#e6e6e6;
+        border:solid 2px #959595;
+      }
+      .pro-search:hover {
+        border:solid 2px black;
+      }
+      .search-but {
+        background-color:#ffc254;
+      }
+      .search-but:hover {
+        background-color:orange;
+      }
+      
     </style>
   </head>
   <body class="bg-white">
@@ -54,10 +69,12 @@
           <div class="row p-2">
             <div class="col-lg-4 p-2">
               <img
-                class="max-230"
-                src="{% static 'images/logo.png' %}"
-                alt=""
-              />
+                style='height:70px;width:70px;'
+                class="max-230 rounded"
+                src="{{about.logo.url}}"
+                alt="our logo"
+              /> 
+              <span>{{about.sitename}}</span>
               <a
                 data-bs-toggle="collapse"
                 data-bs-target="#menu"
@@ -66,21 +83,29 @@
               ></a>
             </div>
             <div id="menu" class="col-lg-8 d-none d-lg-block">
-              <ul class="fw-bold float-end nacul fs-7">
-                <li class="float-start p-3 px-4">
-                  <a href="index.html">خانه</a>
+              <ul class="fw-bold float-end nacul fs-7 mt-2">
+                <li class="float-start">
+                  <form class='mt-2' action="{% url 'search' %}">
+                    <input class='py-1 px-2 rounded-pill pro-search' type="search" name="search" placeholder='    search here ...'>
+                    <button style='border-radius:6px;' class="search-but p-1" type="submit">
+                      <i class="fa-solid fa-magnifying-glass px-2 py-1"></i>
+                    </button>
+                  </form>
                 </li>
-                <li class="float-start p-3 px-4">
-                  <a href="about.html">درباره ی ما</a>
+                <li class="float-start p-3 px-3">
+                  <a class='fs-5' href="{% url 'home' %}">{% trans "home" %}</a>
                 </li>
-                <li class="float-start p-3 px-4">
-                  <a href="products.html">محصولات</a>
+                <li class="float-start p-3 px-3">
+                  <a class='fs-5' href="{% url 'aboutus' %}"> {% trans "about us" %}</a>
                 </li>
-                <li class="float-start p-3 px-4">
-                  <a href="blog.html">وبلاگ</a>
+                <li class="float-start p-3 px-3">
+                  <a class='fs-5' href="{% url 'products' %}">{% trans "products" %}</a>
                 </li>
-                <li class="float-start p-3 px-4">
-                  <a href="contact.html">ارتباط با ما</a>
+                <li class="float-start p-3 px-3">
+                  <a class='fs-5' href="blog.html">{% trans "blog" %}</a>
+                </li>
+                <li class="float-start p-3 px-3">
+                  <a class='fs-5' href="{% url 'contactus' %}">{% trans "contact us" %}</a>
                 </li>
               </ul>
             </div>
@@ -95,57 +120,71 @@
       <div class="inner">
         <div class="container">
           <div class="row">
+            {% if about.telegram or about.instagram %}
             <div class="col-md-4 foot-about">
-              <h4>درباره ی ما</h4>
+              <h4>{% trans "about us" %}</h4>
 
               <p>
-                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
-                در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد
-                نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                {{about.description|linebreaks}}
               </p>
 
               <ul>
-                <li>تهران خیابان فلانی</li>
-                <li>sales@gmail.com</li>
+                <li>{{about.address}}</li>
+                <li>{{about.email}}</li>
                 <li>+09130000000</li>
               </ul>
             </div>
 
             <div class="col-md-4 foot-services">
-              <h4>دسته بندی ها</h4>
+              <h4> {% trans "categories" %}</h4>
 
               <ul>
-                <li><a href="">دسته بندی1</a></li>
-                <li><a href="">2دسته بندی</a></li>
-                <li><a href="">3دسته بندی</a></li>
-                <li><a href="">4دسته بندی</a></li>
-                <li><a href="">5دسته بندی</a></li>
-                <li><a href="">6دسته بندی</a></li>
+                {% for category in categories %}
+                  <li><a href="{% url 'product_category' category.id %}">{{category.title}}</a></li>
+                {% endfor %}
               </ul>
             </div>
-
             <div class="col-md-4 foot-news">
-              <h4>شبکه های اجتماعی</h4>
-              <p>ما را در این شبکه ها دنبال کنید.</p>
+              <h4>{% trans "social media" %}</h4>
+              <p>{% trans "follow us to latest news" %}</p>
               <ul>
+                {% if about.telegram %}
                 <li>
-                  <a href=""><i class="bi bi-facebook text-light"></i></a>
+                  <a href="https://te.me/{{about.telegram}}"><i class="fa-brands fa-telegram"></i></a>
                 </li>
+                {% endif %}
+                {% if about.instagram %}
                 <li>
-                  <a href=""><i class="bi bi-twitter text-light"></i></a>
+                  <a href="https://instagram.com.{{about.instagram}}"><i class="fa-brands fa-instagram"></i></a>
                 </li>
-                <li>
-                  <a href=""><i class="bi bi-instagram text-light"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="bi bi-linkedin text-light"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="bi bi-pinterest text-light"></i></a>
-                </li>
+                {% endif %}
               </ul>
             </div>
+            {% else %}
+            <div class="col-md-6 foot-about">
+              <h4>{% trans "about us" %}</h4>
+
+              <p>
+                {{about.description|linebreaks}}
+              </p>
+
+              <ul>
+                <li>{{about.address}}</li>
+                <li>{{about.email}}</li>
+                <li>+09130000000</li>
+              </ul>
+            </div>
+
+            <div class="col-md-6 foot-services text-center">
+              <h4> {% trans "categories" %}</h4>
+
+              <ul>
+                {% for category in categories %}
+                  <li><a style='font-size:18px;' href="{% url 'product_category' category.id %}">{{category.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
           </div>
         </div>
       </div>
@@ -154,6 +193,7 @@
   <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
   <script src="{% static 'js/popper.min.js' %}"></script>
   <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="https://kit.fontawesome.com/ff17068585.js" crossorigin="anonymous"></script>
   <script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js' %}"></script>
   <script src="{% static 'plugins/testimonial/js/owl.carousel.min.js' %}"></script>
   <script src="{% static 'js/script.js' %}"></script>

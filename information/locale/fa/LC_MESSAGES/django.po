@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-05 21:08+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\models.py:13
+msgid "name"
+msgstr "نام سایت"
+
+#: .\models.py:14
+msgid "Logo"
+msgstr "لوگو"
+
+#: .\models.py:15
+msgid "image"
+msgstr "عکس"
+
+#: .\models.py:16
+msgid "description"
+msgstr "توضیحات"
+
+#: .\models.py:17
+msgid "admin"
+msgstr "ادمین"
+
+#: .\models.py:18
+msgid "address"
+msgstr "ادرس"
+
+#: .\models.py:19
+msgid "email"
+msgstr "ایمیل"
+
+#: .\models.py:20
+msgid "phone"
+msgstr "تلفن همراه"
+
+#: .\models.py:21
+msgid "telegram"
+msgstr "تلگرام"
+
+#: .\models.py:22
+msgid "instagram"
+msgstr "اینستاگرام"
+
+#: .\models.py:23 .\models.py:37
+msgid "date_create"
+msgstr "زمان ایجاد"
+
+#: .\models.py:24 .\models.py:38
+msgid "date_modified"
+msgstr "زمان ویرایش"
+
+#: .\models.py:26 .\models.py:27
+msgid "AboutUs"
+msgstr "درباره ما"
+
+#: .\models.py:35
+msgid "user"
+msgstr "کاربر"
+
+#: .\models.py:36
+msgid "text"
+msgstr "متن"
+
+#: .\models.py:41 .\models.py:42
+msgid "ContactUs"
+msgstr "ارتباط با ما"
+
+#: .\templates\information\aboutus.html:6
+msgid "about us"
+msgstr "درباره ما"
+
+#: .\templates\information\aboutus.html:12
+msgid "About Our Company"
+msgstr "درباره شغل ما"
+
+#: .\templates\information\aboutus.html:39
+msgid "Our Honey Types"
+msgstr "انواع عسل "
+
+#: .\templates\information\contactus.html:7
+msgid "contact us"
+msgstr "ارتباط با ما"
+
+#: .\templates\information\contactus.html:14
+msgid "Contact Us"
+msgstr "ارتباط با ما"
+
+#: .\templates\information\contactus.html:26
+msgid "Contact Form"
+msgstr "فرم ارتباط"
+
+#: .\templates\information\contactus.html:30
+msgid "your text"
+msgstr "متن خود را بنویسید"
+
+#: .\templates\information\contactus.html:38
+msgid "Send Message"
+msgstr "ارسال "
+
+#: .\templates\information\contactus.html:45
+msgid "Address"
+msgstr "ادرس"
+
+#: .\templates\information\contactus.html:48
+msgid "Phone"
+msgstr "تلفن"
+
+#: .\templates\information\contactus.html:49
+msgid "Email"
+msgstr "ایمیل"
+
+#: .\views.py:26
+msgid "your message successfuly send to us"
+msgstr "پیام شما با موفقیت برای ما ارسال شد"
