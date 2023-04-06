@@ -38,13 +38,14 @@
         <div class="row">
           <div class="col-lg-6 text-start">
             <h1 class="fs-12 fw-bolder text-start">
-              عسل طبیعی <br /><span class="text-primary">فروشگاه انلاین</span>
+                <span class="text-primary">  فروشگاه انلاین </span>
+                <span class='text-dark'>عسل طبیعی</span>
             </h1>
             <p class="text-dark d-none d-md-block text-start">
               ما در این فروشگاه انواع و اقسام عسل و محصولاتی بر پایه عسل را به
               شما ارائه میدهیم
             </p>
-            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+            <div class="d-inline-block pt-5 text-start d-block">
               <button
                 class="bmt btn btn-primary shadow fs-5 fw-bolder px-5 py-2"
               >
@@ -59,39 +60,35 @@
         </div>
       </div>
     </div>
+    {% for category in categories %}
     <div class="carousel-item">
       <img
-        src="{% static 'images/slider/s2.jpg' %}"
-        class="d-block w-100"
-        alt="..."
+      src="{% static 'images/slider/s2.jpg' %}"
+      class="d-block w-100"
+      alt="{{category.title}} cover"
       />
       <div class="carousel-caption d-md-block">
         <div class="row">
-          <div class="col-lg-6">
-            <h1 class="fs-12 fw-bolder text-start">
-              Organic Honey <br /><span class="text-primary">online shop</span>
+          <div class="col-lg-6 text-start mt-5">
+            <h1 class="fs-12 fw-bolder text-start mt-3">
+              {{category.title}}
             </h1>
-            <p class="d-none d-md-block text-dark text-start">
-              There are many different varieties of flower honey available…
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
-              laoreet lacus. Morbi auctor quam tempus massa vestibulum aliquet
-              eu vitae ligula.
-            </p>
-            <div class="d-inline-block pt-5 text-start d-none d-lg-block">
+            <span class='text-dark'>{{category.short_description}}</span>
+            <div class="d-inline-block pt-5 text-start d-block">
               <!-- <button class="btn btn-primary shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
-              <button
-                class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2"
-              >
-                Buy Now
-              </button>
+              <a href="{% url 'product_category' category.id %}" class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">
+                {% trans "go shopping" %}
+              </a>
             </div>
           </div>
           <div class="col-lg-6 d-none d-lg-block">
-            <img class="w-100" src="{% static 'images/h3.png' %}" alt="" />
+            <img class="w-100" src="{{category.image.url}}" alt="" />
           </div>
         </div>
       </div>
     </div>
+    {% endfor %}
+    
   </div>
   <button
     class="carousel-control-prev"

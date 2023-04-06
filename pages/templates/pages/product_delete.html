@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block title %}{% trans "Delete" %} {{product.title}}{% endblock title %}
+
+{% block content %}
+    <div class="py-3"></div>
+    <div class="container">
+        <div class="row">
+            <h2 class='mb-2'>{% trans "Are you sure to delete ?" %}</h2>
+            <span>{% trans "title" %} : {{product.title}}</span><br>
+            <span class='mb-3'>{% trans "category" %} : {{product.category.first.title}}</span><br>
+            <span>
+                <form action="" method='POST'>
+                    {% csrf_token %}
+                    <button type='submit' class='btn btn-danger'>{% trans "Delete" %}</button>
+                </form>
+            </span>
+            <div class="col-md-10 text-center mb-5">
+                <img class='delete-photo' src="{{product.image.url}}" alt="{{product.title}} image">
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}

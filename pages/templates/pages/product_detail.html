@@ -22,7 +22,11 @@
     <div class="container">
         <div class="row about-row">
             <div class="col-md-5 p-5 text-center">
-                <img style='border-radius:10px;' src="{{product.image.url}}" alt="{{product.title}} photo">
+                <img class='mb-3' style='border-radius:10px;' src="{{product.image.url}}" alt="{{product.title}} photo">
+                {% if request.user.is_superuser %}
+                <span class='me-2'><a class='btn btn-info text-white rounded-pill px-3' href="{% url 'product_update' product.id %}">{% trans "Edit" %}</a></span>
+                <span><a class='btn btn-danger rounded-pill px-3' href="{% url 'product_delete' product.id %}">{% trans "delete" %}</a></span>
+                {% endif %}
             </div>
             <div class="col-md-7">
                 {% if product.is_exist %}
