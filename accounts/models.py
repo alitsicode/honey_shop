@@ -3,6 +3,7 @@ from django.contrib.auth.models import AbstractUser
 from django.utils.translation import gettext_lazy as _
 
 
+
 class Customeuser(AbstractUser):
     email=models.EmailField(_('email'),max_length=254,unique=True)
     first_name=models.CharField(_('first_name'),max_length=200)
@@ -15,3 +16,4 @@ class Customeuser(AbstractUser):
     
     class Meta:
         verbose_name=_('CustomeUser') 
+

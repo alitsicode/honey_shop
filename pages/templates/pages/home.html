@@ -38,18 +38,16 @@
         <div class="row">
           <div class="col-lg-6 text-start">
             <h1 class="fs-12 fw-bolder text-start">
-                <span class="text-primary">  فروشگاه انلاین </span>
-                <span class='text-dark'>عسل طبیعی</span>
+              <span class='text-dark'>{{home_header.title}}</span>
             </h1>
             <p class="text-dark d-none d-md-block text-start">
-              ما در این فروشگاه انواع و اقسام عسل و محصولاتی بر پایه عسل را به
-              شما ارائه میدهیم
+              {{home_header.short_description|linebreaks}}
             </p>
             <div class="d-inline-block pt-5 text-start d-block">
               <button
                 class="bmt btn btn-primary shadow fs-5 fw-bolder px-5 py-2"
               >
-                رفتن به فروشگاه
+                {% trans "go shopping" %}
               </button>
               <!-- <button class="btn btn-outline-primary ms-4 shadow fs-5 fw-bolder px-5 py-2">Buy Now</button> -->
             </div>
@@ -118,77 +116,27 @@
 <div class="container-fluid products big-padding pt-3">
   <div class="container-xl">
     <div class="section-title row">
-      <h2 class="fs-1 fw-bold">چرا عسل های ما</h2>
+      <h2 class="fs-1 fw-bold">{% trans "why our honey" %}</h2>
       <p>
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده
-        از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
-        سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
-        متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با
-        نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان
-        خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید
-        داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان
-        رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
-        پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد..
+        {{home_header.why_our_honey}}
       </p>
     </div>
     <div class="row mt-5">
-      <div class="col-lg-3 mb-4 col-md-6">
-        <div class="cover text-center">
-          <img
+      {% for property in our_property %}
+        <div class="col-lg-3 mb-4 col-6">
+          <div class="cover text-center">
+            <img
             class="w-125"
-            src="{% static 'images/icon/honeycomb.png' %}"
-            alt=""
-          />
-          <h2 class="fs-3 fw-bolder mt-4">عسل طبیعی</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
-            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-          </p>
+              src="{{property.image.url}}"
+              alt="{{property.title}} photo"
+              />
+              <h2 class="fs-3 fw-bolder mt-4">{{property.title}} </h2>
+            <p>
+              {{property.description|linebreaks}}
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="col-lg-3 mb-4 col-md-6">
-        <div class="cover text-center">
-          <img class="w-125" src="{% static 'images/icon/bee.png' %}" alt="" />
-          <h2 class="fs-3 fw-bolder mt-4">ملکه زنبور عسل</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
-            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-3 mb-4 col-md-6">
-        <div class="cover text-center">
-          <img
-            class="w-125"
-            src="{% static 'images/icon/honey.png' %}"
-            alt=""
-          />
-          <h2 class="fs-3 fw-bolder mt-4">بسته بندی بهداشتی</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
-            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-          </p>
-        </div>
-      </div>
-      <div class="col-lg-3 mb-4 col-md-6">
-        <div class="cover text-center">
-          <img class="w-125" src="{% static 'images/icon/fast.png' %}" alt="" />
-          <h2 class="fs-3 fw-bolder mt-4">تحویل سریع</h2>
-          <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
-            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
-            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
-            و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-          </p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -244,9 +192,10 @@
       <div class="col-md-7">
         <div class="abut-detail fs-6">
           <p class="mb-3">{{about.description|truncatewords:40|linebreaks}}</p>
+          <div class='text-center mt-2'><a class='btn btn-warning rounded-pill' href="{% url 'aboutus' %}">{% trans "more" %}</a></div>
         </div>
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5 mt-4">
         <img class='rounded' src="{{about.image.url}}" alt="{{about.title}} cover" />
       </div>
     </div>
@@ -284,49 +233,19 @@
 <div id="blog" class="service container-fluid px-4 bg-white py-5">
   <div class="container">
     <div class="section-title row mb-3">
-      <h2 class="fw-bolder">وبلاگ</h2>
-      <p>
-        ما روزانه مقالاتی درباره عسل و اطلاعاتی که ممکن است ندانید برایتان قرار
-        میدهیم تا با اطلاعات بیشتری عسل خود را انتخاب کنید.
-      </p>
+      <h2 class="fw-bolder">{% trans "gallery" %}</h2>
     </div>
     <div class="row mt-5">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="serv-cove rounded bg-white p-2">
-          <img src="{% static 'images/blog/b1.jpg' %}" alt="" />
-          <div class="p-2">
-            <h5 class="mt-3 fs-7 fw-bold">عسل ترند در دنیا 10</h5>
-            <span class="fs-8">پنج روز پیش </span>
-            <span class="float-end fs-8"
-              ><i class="bi bi-person"></i> نویسنده 1</span
-            >
+      {% for gallery in galleries %}
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="serv-cove rounded bg-white p-2">
+            <img src="{{gallery.image.url}}" alt="gallery picture" />
+            <div class="p-2">
+              <h5 class="mt-3 fs-7 fw-bold">عسل ترند در دنیا 10</h5>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="serv-cove rounded bg-white p-2">
-          <img src="{% static 'images/blog/b2.jpg' %}" alt="" />
-          <div class="p-2">
-            <h5 class="mt-3 fs-7 fw-bold">عسل هایی با بیشترین خواص دارویی</h5>
-            <span class="fs-8">دو ماه پیش</span>
-            <span class="float-end fs-8"
-              ><i class="bi bi-person"></i> نویسنده 2</span
-            >
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="serv-cove rounded bg-white p-2">
-          <img src="{% static 'images/blog/b4.jpg' %}" alt="" />
-          <div class="p-2">
-            <h5 class="mt-3 fs-7 fw-bold">مرغول ترین نوع عسل در دنیا</h5>
-            <span class="fs-8">یک سال پیش</span>
-            <span class="float-end fs-8"
-              ><i class="bi bi-person"></i> نویسنده 3</span
-            >
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load i18n %}
+{% load comment_tags %}
 
 {% block title %}{{product.title}}{% endblock title %}
 
@@ -40,9 +41,20 @@
                 {% else %}
                     <span class="fs-5 ps-3">{% trans "$" %}{{product.price}}</span>
                 {% endif %}
-                 <ul class="mt-0 mt-2 mb-3 vgth">
+                <ul class="mt-0 mt-2 mb-3 vgth">
                     <li class="float-end gvi">
-                        <i class="bi text-danger bi-heart-fill"></i>
+                        {% if liked %}
+                        <a onclick= "like('{{product.id}}')"><i id='like' class="fa-solid fa-heart fa-lg text-danger "></i></a>
+                        {% else %}
+                        <a onclick= "like('{{product.id}}')"><i id='like' class="fa-regular fa-heart fa-lg"></i></a>
+                        {% endif %}
+                    </li><br>
+                    <li class="float-end gvi mt-2">
+                        {% if saved %}
+                        <a onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-solid fa-bookmark fa-lg me-1 "></i></a>
+                        {% else %}
+                        <a onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-regular fa-bookmark fa-lg me-1 "></i></a>
+                        {% endif %}
                     </li>
                 </ul>
                 {% if product.properties %}
@@ -59,81 +71,26 @@
         </div>
         <div class="row review mt-5">
             <div class="col-md-8">
-                 <h4>{% trans "Product comments" %}</h4>
-                 <div class="row m-0 reviewrow p-3 px-0 border-bottom">
-                    <div class="col-md-12 align-items-center col-9 rcolm"> 
-                        <div class="review">
-                            <li class="col-8 ratfac">
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                             </li>              
-                        </div>
-                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
-
-                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
-                        </h3>
-
-                        <div class="review-text">
-                             Aliquam laoreet nulla ac metus mattis viverra. Fusce hendrerit, augue eget hendrerit pellentesque, lorem nulla condimentum massa, efficitur pellentesque tortor sapien sed lectus
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-
-                    </div>
-                </div>
-
+                <h4>{% trans "Product comments" %} ({% get_comments_count product user %})</h4>
+                {% render_comments product request %}
+                {% comment %} {% for comment in product.comments.all %} {% endcomment %}
                 <div class="row m-0 reviewrow p-3 px-0 border-bottom">
                     <div class="col-md-12 align-items-center col-9 rcolm"> 
-                        <div class="review">
-                            <li class="col-8 ratfac">
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                             </li>              
-                        </div>
-                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
-
-                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
+                        {% comment %} <h3 class="fs-6 fw-semi mt-2">{{comment.user.username}} {% endcomment %}
+                            
+                            <small class="float-end fw-normal"> </small>
                         </h3>
-
+                        
                         <div class="review-text">
-                            consectetur adipiscing elit. Nunc eget lectus imperdiet, scelerisque nunc id, pharetra metus.
+                            {% comment %} Aliquam laoreet nulla ac metus mattis viverra. Fusce hendrerit, augue eget hendrerit pellentesque, lorem nulla condimentum massa, efficitur pellentesque tortor sapien sed lectus {% endcomment %}
                         </div>
                     </div>
                     <div class="col-md-2">
-
+                        
                     </div>
                 </div>
+                {% comment %} {% endfor %} {% endcomment %}
 
-                <div class="row m-0 reviewrow px-0">
-                    <div class="col-md-12 align-items-center col-9 rcolm"> 
-                        <div class="review">
-                            <li class="col-8 ratfac">
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi text-warning bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                                 <i class="bi bi-star-fill"></i>
-                             </li>              
-                        </div>
-                        <h3 class="fs-6 fw-semi mt-2">Vinoth kumar
-
-                        <small class="float-end fw-normal"> 20 Aug 2022 </small>
-                        </h3>
-
-                        <div class="review-text">
-                            Great work, keep it up
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-
-                    </div>
-                </div>
             </div>
             </div>
         </div>
