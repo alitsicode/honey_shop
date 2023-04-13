@@ -1,0 +1,251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-11 02:32+0430\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\models.py:13 .\models.py:31 .\models.py:56 .\models.py:76 .\models.py:119
+#: .\templates\pages\product_delete.html:12
+msgid "title"
+msgstr "عنوان"
+
+#: .\models.py:14 .\models.py:32 .\models.py:57
+msgid "description"
+msgstr "توضیحات"
+
+#: .\models.py:15 .\models.py:37 .\models.py:58 .\models.py:120
+msgid "image"
+msgstr "تصویر"
+
+#: .\models.py:16
+msgid "created time"
+msgstr "زمان ایجاد"
+
+#: .\models.py:17
+msgid "updated time"
+msgstr "زمان ویرایش"
+
+#: .\models.py:20
+msgid "Category"
+msgstr "دسته بندی"
+
+#: .\models.py:21
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\models.py:33
+msgid "price"
+msgstr "قیمت"
+
+#: .\models.py:34
+msgid "has_discount"
+msgstr "ایا تخفیف دارد ؟"
+
+#: .\models.py:35
+msgid "price_with_discount"
+msgstr "قیمت با اعمال تخفیف"
+
+#: .\models.py:36 .\templates\pages\product_delete.html:13
+#: .\templates\pages\product_detail.html:15
+#: .\templates\pages\product_list.html:36
+#: .\templates\pages\product_list.html:53
+msgid "category"
+msgstr "دسته بندی"
+
+#: .\models.py:38
+msgid "product_status"
+msgstr "وضعیت محصول"
+
+#: .\models.py:39 .\models.py:59 .\models.py:79 .\models.py:94 .\models.py:108
+#: .\models.py:121
+msgid "created"
+msgstr "زمان ایجاد"
+
+#: .\models.py:40 .\models.py:60 .\models.py:80 .\models.py:95 .\models.py:109
+#: .\models.py:122
+msgid "updated"
+msgstr "زمان ویرایش"
+
+#: .\models.py:41
+msgid "product_properties"
+msgstr "ویژگی های محصول"
+
+#: .\models.py:46
+msgid "Product"
+msgstr "محصول"
+
+#: .\models.py:47
+msgid "Products"
+msgstr "محصولات"
+
+#: .\models.py:63
+msgid "Our_Property"
+msgstr "ویژگی ما"
+
+#: .\models.py:64
+msgid "Our_Properties"
+msgstr "ویژگی های ما"
+
+#: .\models.py:77
+msgid "short_description"
+msgstr "توضیح کوتاه"
+
+#: .\models.py:78
+msgid "why_our_honey"
+msgstr "چرا عسل های ما"
+
+#: .\models.py:84
+msgid "HomeHeader"
+msgstr "سر تیتر صفحه ی خانه"
+
+#: .\models.py:85
+msgid "HomeHeaders"
+msgstr "سر تیتر های صفحه ی خانه"
+
+#: .\models.py:92 .\models.py:106
+msgid "user"
+msgstr "کاربر"
+
+#: .\models.py:93 .\models.py:107
+msgid "product"
+msgstr "محصول"
+
+#: .\models.py:98
+msgid "Like"
+msgstr "لایک"
+
+#: .\models.py:99
+msgid "Likes"
+msgstr "لایک ها"
+
+#: .\models.py:112
+msgid "BookMark"
+msgstr "ذخیره شده"
+
+#: .\models.py:113
+msgid "BookMarks"
+msgstr "ذخیره شده ها"
+
+#: .\models.py:125 .\templates\pages\gallery.html:6
+msgid "Gallery"
+msgstr "گالری تصویر "
+
+#: .\models.py:126
+msgid "Galleries"
+msgstr "گالری تصاویر"
+
+#: .\templates\pages\gallery.html:7
+msgid "many photos of our products "
+msgstr "عکس های محصولات ما"
+
+#: .\templates\pages\gallery.html:13
+msgid "Photo Gallery"
+msgstr "عکس گالری"
+
+#: .\templates\pages\home.html:51 .\templates\pages\home.html:79
+msgid "go shopping"
+msgstr "رفتن به خرید"
+
+#: .\templates\pages\home.html:120
+msgid "why our honey"
+msgstr "چرا عسل های ما"
+
+#: .\templates\pages\home.html:149
+msgid "our product"
+msgstr "محصولات ما"
+
+#: .\templates\pages\home.html:175 .\templates\pages\home.html:196
+#: .\templates\pages\home.html:222 .\templates\pages\home.html:238
+#: .\templates\pages\product_list.html:39
+#: .\templates\pages\product_list.html:56
+msgid "more"
+msgstr "بیشتر"
+
+#: .\templates\pages\home.html:190
+msgid "about our shop"
+msgstr "درباره ی فروشگاه ما"
+
+#: .\templates\pages\home.html:209
+msgid "categories"
+msgstr "دسته بندی ها"
+
+#: .\templates\pages\home.html:237
+msgid "gallery"
+msgstr "گالری تصاویر"
+
+#: .\templates\pages\product_delete.html:4
+#: .\templates\pages\product_delete.html:17
+msgid "Delete"
+msgstr "حذف"
+
+#: .\templates\pages\product_delete.html:11
+msgid "Are you sure to delete ?"
+msgstr "از حذف مطمئنی ؟"
+
+#: .\templates\pages\product_detail.html:29
+#: .\templates\pages\product_update.html:40
+msgid "Edit"
+msgstr "ویرایش"
+
+#: .\templates\pages\product_detail.html:30
+msgid "delete"
+msgstr "حذف"
+
+#: .\templates\pages\product_detail.html:37
+msgid "out of exist !"
+msgstr "اتمام موجودی"
+
+#: .\templates\pages\product_detail.html:40
+#: .\templates\pages\product_detail.html:41
+#: .\templates\pages\product_detail.html:43
+msgid "$"
+msgstr "تومان"
+
+#: .\templates\pages\product_detail.html:62
+msgid "product properties"
+msgstr "خواص محصولات"
+
+#: .\templates\pages\product_detail.html:70
+msgid "Product Detail"
+msgstr "جزئیات محصول"
+
+#: .\templates\pages\product_detail.html:75
+msgid "Product comments"
+msgstr "کامنت های محصول"
+
+#: .\templates\pages\product_list.html:6
+msgid "products"
+msgstr "محصولات"
+
+#: .\templates\pages\product_list.html:7
+msgid "you can see our all product in all types and property"
+msgstr "در این صفحه همه ی محصولات ما از همه ی دسته بندی ها و با خاصیت های مختلف را میتوانید پیدا کنید"
+
+#: .\templates\pages\product_list.html:13
+msgid "Product List"
+msgstr "لیست محصولات"
+
+#: .\templates\pages\product_list.html:47
+msgid "we finished!"
+msgstr "اتمام موجودی !"
+
+#: .\templates\pages\product_update.html:6
+msgid "Update Product"
+msgstr "ویرایش محصول"
+
+#: .\templates\pages\product_update.html:14
+msgid "Update"
+msgstr "ویرایش"

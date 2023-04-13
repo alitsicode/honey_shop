@@ -21,11 +21,25 @@ def show_home(request):
 class ProductListView(generic.ListView):
     model = Product
     template_name = "pages/product_list.html"
+    paginate_by=8
     context_object_name='products'
+
+class ProductBookMarkedView(LoginRequiredMixin,generic.ListView):
+    model=BookMark
+    template_name = "pages/bookmark_product.html"
+    paginate_by=8
+    context_object_name='bookmarks'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["bookmarks"] =BookMark.objects.filter(user=self.request.user) 
+        return context
+    
+    
     
 class Product_By_Category(generic.ListView):
     model=Category
     template_name='pages/product_list.html'
+    paginate_by=8
     def get_context_data(self, **kwargs):
         pk=self.kwargs['pk']
         categorie=get_object_or_404(Category,pk=pk)
@@ -55,6 +69,7 @@ class ProductDetailView(LoginRequiredMixin,generic.DetailView):
 class ProductSearchListView(generic.ListView):
     template_name = "pages/product_list.html"
     model=Product
+    paginate_by=8
     def get_context_data(self, **kwargs):
         query=self.request.GET.get("search")
         context = super().get_context_data(**kwargs)
@@ -97,7 +112,11 @@ def like(request,pk):
     return redirect('product_detail',pk)
 
 
+class GalleryListView(generic.ListView):
+    model = Gallery
+    paginate_by=1
+    template_name = "pages/gallery.html"
+    context_object_name='galleries'
 
-    
 
 

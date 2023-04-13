@@ -7,6 +7,7 @@
 	<title>{% trans "Login" %}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{% trans "you can login in our site and watch many types of honey maybe you want" %}">
 <!--===============================================================================================-->	
 	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
 <!--===============================================================================================-->
@@ -36,7 +37,7 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img class='mb-5' style='border-radius:100px;' src="{% static 'images/honey.jpg' %}" alt="IMG">
+					<img class='mb-5' style='border-radius:100px;' src="{% static 'images/honey.jpg' %}" alt="login picture">
 				</div>
 
 				<form class="login100-form validate-form" method='POST'>
@@ -80,13 +81,13 @@
 					</div>
 
 					<div class="text-center p-t-12">
-						<a class="txt2" href="{% url 'account_reset_password' %}">
+						<a title='reset password' class="txt2" href="{% url 'account_reset_password' %}">
 							{% trans "I Forgot my information " %}
 						</a>
 					</div>
 
 					<div class="text-center p-t-24">
-						<a class="txt2" href="{% url 'account_signup' %}">
+						<a title='sign up' class="txt2" href="{% url 'account_signup' %}">
 							{% trans "Create your Account" %}
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>

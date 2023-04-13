@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+    
+    <!--  ************************* Page Title Starts Here ************************** -->
+{% block title %}{% trans "products" %}{% endblock title %}
+{% block meta_description %}{% trans "you can see our all product in all types and property" %}{% endblock meta_description %}
+
+{% block content %}
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2 class="text-start">{% trans "Product List" %}</h2>
+        </div>
+    </div>
+</div>
+
+<!-- ******************** About US Starts Here ******************* -->
+
+<div class="container-fluid products big-padding px-3 bg-honey">
+    <div class="container-xl">
+        <div class="row">
+            {% for product in bookmarks %}
+                <div class="col-lg-3 col-md-4 mb-4">
+                    {% if product.product.is_exist %}
+                        <a title='product detail' href="{% url 'product_detail' product.product.id %}">
+                            <div class="product bg-white p-4 text-center shadow-md">
+                                <img src="{{product.product.image.url}}" alt="{{product.product.title}} image">
+                                <div>
+                                    <h4 class="fw-bolder fs-5 mt-4 text-center">{{product.title}}</h4>
+                                    {% if product.product.is_discount%}
+                                    <span class="fw-bolder fs-4">{{product.product.price_with_discount}}</span> <span class="text-danger text-decoration-line-through">{{product.product.price}}</span><br>
+                                    {% else %}
+                                    <span class="fw-bolder fs-4">{{product.product.price}}</span><br>
+                                    {% endif %}
+                                    <span class='text-muted'> {% trans "category" %} : {{product.product.category.first.title}}</span>
+                                </div>
+                                <div class="d-inline-block mt-3">
+                                    <button class="btn btn-primary px-5">{% trans "more" %}</button>
+                                </div>
+                            </div>
+                        </a>
+                    {% else %}
+                    <a title='product detail' href="{% url 'product_detail' product.product.id %}">
+                        <div class="product bg-white p-4 text-center shadow-md">
+                            <img src="{{product.product.image.url}}" alt="{{product.product.title}} image">
+                            <div>
+                                <h4 class="fw-bolder fs-5 mt-4 text-center "><del class='text-muted'>{{product.product.title}}</del> <span class='text-danger ms-3'>{% trans "we finished!" %}</span></h4>
+                                {% if product.product.is_discount%}
+                                <span class="fw-bolder fs-4">{{product.product.price_with_discount}}</span> <span class="text-danger text-decoration-line-through">{{product.product.price}}</span><br>
+                                {% else %}
+                                <span class="fw-bolder fs-4">{{product.product.price}}</span><br>
+                                {% endif %}
+                                <span class='text-muted'>{% trans "category" %} : {{product.product.category.first.title}}</span>
+                            </div>
+                            <div class="d-inline-block mt-3">
+                                <button class="btn btn-primary px-5">{% trans "more" %}</button>
+                            </div>
+                        </div>
+                    </a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <div class="col-md-12">
+                {% if page_obj.has_other_pages %}
+                    <nav>
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                            <li class="page-item "><a class="page-link" href="?page={{ page_obj.previous_page_number}}{% if request.GET.search %}&search={{request.GET.search}}{% endif %}"><i class="fa fa-angle-double-left"></i></a></li>
+                            {% endif %}
+                            {% for i in page_obj.paginator.page_range %}
+                            {% if page_obj.number == i %}
+                                <li class="page-item active"><a class="page-link" href="?page={{i}}{% if request.GET.search %}&search={{request.GET.search}}{% endif %}">{{i}}</a></li>
+                            {% else %}
+                                <li class="page-item"><a class="page-link" href="?page={{i}}{% if request.GET.search %}&search={{request.GET.search}}{% endif %}">{{i}}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                            {% if page_obj.has_next  %}
+                            <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number}}{% if request.GET.search %}&search={{request.GET.search}}{% endif %}"><i class="fa fa-angle-double-right"></i></a></li>
+                            {% endif %}
+                        </ul>
+                    </nav>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+    
+{% endblock content %}

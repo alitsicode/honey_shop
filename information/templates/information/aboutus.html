@@ -4,6 +4,7 @@
 {% load i18n %}
 
 {% block title %}{% trans "about us" %}{% endblock title %}
+{% block meta description %}{{informations.description}}{% endblock meta description %}
 
 {% block content %}
 <div class="page-nav no-margin row">
@@ -24,11 +25,20 @@
                     <p class="mb-3">
                         {{informations.description|linebreaks}}
                     </p>
+                    <div class="text-center">
+                        {% if about.telegram %}
+                        <span class='mx-2 text-center'><a title='our telegram account' href="https://te.me/{{about.telegram}}"><i class="navbar-item fa-brands fa-telegram fa-2x"></i></a></span>
+                        {% endif %}
+                        {% if about.instagram %}
+                            <span><a title='our instagram account' href="https://instagram.com.{{about.instagram}}"><i class="navbar-item fa-brands fa-instagram fa-2x"></i></a></span>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
             <div class="col-md-5 mt-4">
                 <img src="{{informations.image.url}}" alt="informations image" />
             </div>
+            
         </div>
   </div>
 </div>
@@ -37,88 +47,33 @@
     <div class="container">
         <div class="section-title row mb-3">
             <h2 class="fw-bolder">{% trans "Our Honey Types" %}</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum
-                sit nibh amet egestas tellus.
-            </p>
         </div>
         <div class="row mt-5">
+            {% for category in categories %}
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="serv-cove shadow-md rounded bg-white p-3">
                     <div class="prf row mb-3">
-                        <div class="col-3">
+                        <div class="col-12">
                             <img
-                            class="rounded-pill"
-                            src="{% static 'images/testimonial/member-01.jpg' %}"
-                            alt=""
+                            class="rounded"
+                            src="{{category.image.url}}"
+                            alt="{{category.title}} image"
                             />
                         </div>
-                        <div class="col-9 align-self-center">
-                            <h6 class="mb-0 fw-bolder">Vinoth Parkash</h6>
-                            <span>CEO Fabric Nation</span>
+                        <div class="col-12 mt-2 align-self-center text-center">
+                            <h4 class="mb-0 fw-bolder">{{category.title}}</h4>
                         </div>
                     </div>
                     <div class="det text-center">
                         <p class="fs-7 fst-italic">
-                            Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
-              Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
-              Nam ornare felis ut arcu tristique luctus. Curabitur
-            </p>
+                            {{category.short_description}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
     </div>
-</div>
-
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="serv-cove shadow-md rounded bg-white p-3">
-        <div class="prf row mb-3">
-            <div class="col-3">
-                <img
-                class="rounded-pill"
-                src="{% static 'images/testimonial/member-03.jpg' %}"
-                alt=""
-                />
-            </div>
-            <div class="col-9 align-self-center">
-                <h6 class="mb-0 fw-bolder">Jackson Daniel</h6>
-                <span>CEO Notitech</span>
-            </div>
-        </div>
-        <div class="det text-center">
-            <p class="fs-7 fst-italic">
-                Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
-                Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
-                Nam ornare felis ut arcu tristique luctus. Curabitur
-            </p>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-4 col-md-6 mb-4">
-    <div class="serv-cove shadow-md rounded bg-white p-3">
-        <div class="prf row mb-3">
-            <div class="col-3">
-                <img
-                class="rounded-pill"
-                src="{% static 'images/testimonial/member-02.jpg' %}"
-                alt=""
-                />
-            </div>
-            <div class="col-9 align-self-center">
-                <h6 class="mb-0 fw-bolder">Praveen Thaney</h6>
-                <span>Admin Vintech</span>
-            </div>
-        </div>
-        <div class="det text-center">
-            <p class="fs-7 fst-italic">
-                Sed lectus ante, pharetra in lacus sed, efficitur luctus elit.
-                Suspendisse commodo felis dictum, tempor tortor a, dapibus tellus.
-                Nam ornare felis ut arcu tristique luctus. Curabitur
-            </p>
-        </div>
-    </div>
-</div>
-</div>
-</div>
 </div>
 
 {% endblock content %}

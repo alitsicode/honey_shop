@@ -49,7 +49,7 @@ class BookMarkAdmin(admin.ModelAdmin):
 
 @admin.register(Gallery)
 class GalleryAdmin(admin.ModelAdmin):
-    list_display=['image_tag']
+    list_display=['title','image_tag']
     
 
 

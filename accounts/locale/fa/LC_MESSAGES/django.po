@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-04 19:13+0430\n"
+"POT-Creation-Date: 2023-04-11 02:32+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,33 +16,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-#: .\models.py:7
+
+#: .\models.py:8
 msgid "email"
 msgstr "ایمیل"
 
-#: .\models.py:8
+#: .\models.py:9
 msgid "first_name"
 msgstr "نام"
 
-#: .\models.py:9
+#: .\models.py:10
 msgid "last_name"
 msgstr "نام خانوادگی"
 
-#: .\models.py:10
+#: .\models.py:11
 msgid "avatar"
 msgstr "تصویر پروفایل"
 
-#: .\models.py:11
+#: .\models.py:12
 msgid "phone"
 msgstr "تلفن همراه"
 
-#: .\models.py:17
+#: .\models.py:18
 msgid "CustomeUser"
-msgstr "کاربران"
+msgstr "کاربر"
+
+#: .\models.py:19
+msgid "CustomeUsers"
+msgstr "کاربران سایت"
 
 #: .\templates\accounts\profile.html:4
 msgid "user profile"
 msgstr "پروفایل کاربر"
+
+#: .\templates\accounts\profile.html:5
+msgid "you can see your profile in this page"
+msgstr "در این صفحه میتوانید پروفایل کاربری خود را مشاهده کنید"
 
 #: .\templates\accounts\profile.html:14
 msgid "your profile"
@@ -52,14 +61,13 @@ msgstr "پروفایل شما"
 msgid "Hi"
 msgstr "سلام"
 
-#: .\templates\accounts\profile.html:29
-msgid "Change Password"
-msgstr "تغییر رمز عبور"
-
-#: .\templates\accounts\profile.html:61
+#: .\templates\accounts\profile.html:65
 msgid "Save"
 msgstr "ذخیره"
 
 #: .\views.py:18
 msgid "your profile successfuly updated"
 msgstr "پروفایل شما با موفقیت ویرایش شد"
+
+#~ msgid "Change Password"
+#~ msgstr "تغییر رمز عبور"

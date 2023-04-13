@@ -1,0 +1,243 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-11 12:50+0430\n"
+"PO-Revision-Date: 2023-04-10 20:49+0330\n"
+"Last-Translator: ali tavoosi <ali@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: .\403.html:8
+msgid "403 error page"
+msgstr "خطای 403"
+
+#: .\403.html:13 .\404.html:13 .\500.html:13
+msgid "Error"
+msgstr "خطا"
+
+#: .\403.html:165
+msgid "Permission Denied"
+msgstr "عدم دسترسی"
+
+#: .\403.html:166
+msgid "Ooops ! Sorry but you dont have permission to Acess this page"
+msgstr "متاسفیم! ولی شما دسترسی برای دیدن این صفحه را ندارید"
+
+#: .\403.html:167 .\404.html:167 .\500.html:167
+msgid "home page"
+msgstr "خانه"
+
+#: .\404.html:9
+#, fuzzy
+#| msgid "Page not found"
+msgid "404 not found page"
+msgstr "صفحه پیدا نشد"
+
+#: .\404.html:165
+msgid "Page not found"
+msgstr "صفحه پیدا نشد"
+
+#: .\404.html:166
+msgid ""
+"The page you are looking for might have been removed had its name changed or "
+"is temporarily unavailable."
+msgstr ""
+"صفحه ای که دنبال آن میگردید یا حذف شده یا ادرس آن تغییر کرده و یا موقتا در "
+"دسترس نیست"
+
+#: .\500.html:165
+msgid "Server Error !"
+msgstr "خطای سرور !"
+
+#: .\500.html:166
+msgid "Sorry but the server is break done !"
+msgstr "متاسفیم سرور دچار مشکل شده !"
+
+#: .\account\email.html:4
+msgid "Enter Email"
+msgstr "ایمیل را وارد کنید"
+
+#: .\account\email.html:11
+msgid "Please Enter your email"
+msgstr "لطفا ایمیل خود را وارد کنید"
+
+#: .\account\email.html:11
+msgid "Correctly"
+msgstr "به درستی"
+
+#: .\account\email.html:26 .\account\password_reset.html:26
+msgid "Send"
+msgstr "ارسال"
+
+#: .\account\login.html:7 .\account\login.html:46 .\account\login.html:79
+#: .\account\password_reset_done.html:27
+msgid "Login"
+msgstr "ورود"
+
+#: .\account\login.html:10
+msgid "you can login in our site and watch many types of honey maybe you want"
+msgstr ""
+"شما میتوانید با ورود به سایت ما میتوانید انواع عسل ها رو که ممکن است نیاز "
+"داشته باشید را ببینید"
+
+#: .\account\login.html:70
+msgid "remember me"
+msgstr "مرا به یاد داشته باش"
+
+#: .\account\login.html:85
+msgid "I Forgot my information "
+msgstr "فراموشی اطلاعات"
+
+#: .\account\login.html:91
+msgid "Create your Account"
+msgstr "ساختن اکانت جدید"
+
+#: .\account\logout.html:3 .\account\logout.html:14
+msgid "logout"
+msgstr "خروج"
+
+#: .\account\logout.html:10
+msgid "Logout Page !"
+msgstr "صفحه ی خروج !"
+
+#: .\account\logout.html:13
+msgid "are you sure to logout?"
+msgstr "میخواهی خارج شوی؟"
+
+#: .\account\password_change.html:4
+msgid "change your password"
+msgstr "تغییر رمز"
+
+#: .\account\password_change.html:11
+msgid "Change Password Form"
+msgstr "فرم تغییر رمز"
+
+#: .\account\password_change.html:26
+msgid "Submit"
+msgstr "تایید"
+
+#: .\account\password_reset.html:4
+msgid "welcome to Reset Password page"
+msgstr "به صفحه ی فراموشی رمز خوش آمدی"
+
+#: .\account\password_reset.html:5
+#, fuzzy
+#| msgid "Password Reset"
+msgid "password reset"
+msgstr "تغییر رمز"
+
+#: .\account\password_reset.html:11
+msgid "Please Enter your email below"
+msgstr "ایمیل خود را در زیر وارد کنید"
+
+#: .\account\password_reset_done.html:4 .\account\password_reset_done.html:18
+msgid "Password Reset"
+msgstr "تغییر رمز"
+
+#: .\account\password_reset_done.html:20
+msgid ""
+"We have sent you an e-mail. If you have not received it please check your "
+"spam folder. Otherwise contact us if you do not receive it in a few minutes"
+msgstr ""
+"ما ایمیلی به شما فرستادیم. اگر اگر آن را دریافت نکرده اید پوشه ی اسپم یا "
+"هرزنامه ی خود را چک کنید. اگر تا دقایقی دیگر ایمیل را دریافت نکردید به ما در "
+"ارتباط باشید"
+
+#: .\account\password_reset_done.html:24
+msgid "menu"
+msgstr "منو"
+
+#: .\account\password_reset_done.html:25
+msgid "Edit Email"
+msgstr "ویرایش ایمیل"
+
+#: .\account\password_reset_done.html:26
+msgid "Home"
+msgstr "خانه"
+
+#: .\account\signup.html:7 .\account\signup.html:49 .\account\signup.html:74
+msgid "Signup"
+msgstr "ثبت نام"
+
+#: .\account\signup.html:10
+msgid "you can sign up in our site and enjoy many types of honey"
+msgstr "در سایت ما ثبت نام کنید و از انواع مختلف عسل لذت ببرید"
+
+#: .\account\signup.html:81
+msgid "i have an account"
+msgstr "اکانت دارم"
+
+#: .\base.html:11
+msgid "welcome to honycomb website with many types of honey"
+msgstr "به سایت ما خوش امدی اینجا پر از عسله !"
+
+#: .\base.html:12
+msgid "honey shop"
+msgstr "فروشگاه عسل"
+
+#: .\base.html:125
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#: .\base.html:134
+msgid "home"
+msgstr "خانه"
+
+#: .\base.html:137 .\base.html:182 .\base.html:222
+msgid "about us"
+msgstr "درباره ما"
+
+#: .\base.html:140
+msgid "products"
+msgstr "محصولات"
+
+#: .\base.html:143
+msgid "Gallery"
+msgstr "گالری"
+
+#: .\base.html:146
+msgid "contact us"
+msgstr "ارتباط با ما"
+
+#: .\base.html:150
+msgid "profile"
+msgstr "پروفایل"
+
+#: .\base.html:153
+msgid "bookmarked"
+msgstr "ذخیره شده ها"
+
+#: .\base.html:156
+msgid "LogOut"
+msgstr "خروج"
+
+#: .\base.html:160
+msgid "LogIn"
+msgstr "ورود"
+
+#: .\base.html:163
+msgid "SignUp"
+msgstr "ثبت نام"
+
+#: .\base.html:196 .\base.html:236
+msgid "categories"
+msgstr "دسته بندی ها"
+
+#: .\base.html:205
+msgid "social media"
+msgstr "شبکه های اجتماعی"
+
+#: .\base.html:206
+msgid "follow us to latest news"
+msgstr "برای دریافت اخرین اخبار ما را دنبال کنید"

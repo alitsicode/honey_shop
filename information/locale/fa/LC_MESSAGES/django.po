@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-05 21:08+0430\n"
+"POT-Creation-Date: 2023-04-11 02:32+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
 #: .\models.py:13
 msgid "name"
 msgstr "نام سایت"
@@ -84,11 +85,11 @@ msgstr "ارتباط با ما"
 msgid "about us"
 msgstr "درباره ما"
 
-#: .\templates\information\aboutus.html:12
+#: .\templates\information\aboutus.html:13
 msgid "About Our Company"
 msgstr "درباره شغل ما"
 
-#: .\templates\information\aboutus.html:39
+#: .\templates\information\aboutus.html:49
 msgid "Our Honey Types"
 msgstr "انواع عسل "
 
@@ -96,31 +97,35 @@ msgstr "انواع عسل "
 msgid "contact us"
 msgstr "ارتباط با ما"
 
-#: .\templates\information\contactus.html:14
+#: .\templates\information\contactus.html:8
+msgid "send us any idea and review thats important to us"
+msgstr "نظرات و پیشنهادات شما برای ما اهمیت زیادی دارد . نظرات خود را برای ما ارسال کنید"
+
+#: .\templates\information\contactus.html:15
 msgid "Contact Us"
 msgstr "ارتباط با ما"
 
-#: .\templates\information\contactus.html:26
+#: .\templates\information\contactus.html:27
 msgid "Contact Form"
 msgstr "فرم ارتباط"
 
-#: .\templates\information\contactus.html:30
+#: .\templates\information\contactus.html:31
 msgid "your text"
 msgstr "متن خود را بنویسید"
 
-#: .\templates\information\contactus.html:38
+#: .\templates\information\contactus.html:39
 msgid "Send Message"
 msgstr "ارسال "
 
-#: .\templates\information\contactus.html:45
+#: .\templates\information\contactus.html:46
 msgid "Address"
 msgstr "ادرس"
 
-#: .\templates\information\contactus.html:48
+#: .\templates\information\contactus.html:49
 msgid "Phone"
 msgstr "تلفن"
 
-#: .\templates\information\contactus.html:49
+#: .\templates\information\contactus.html:50
 msgid "Email"
 msgstr "ایمیل"
 

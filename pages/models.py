@@ -116,6 +116,7 @@ class BookMark(models.Model):
         return self.user.username
 
 class Gallery(models.Model):
+    title=models.CharField(_("title"), max_length=200,blank=True,null=True)
     image=models.ImageField(_("image"), upload_to='gallery')
     created=models.DateTimeField(_("created"), auto_now_add=True)
     updated=models.DateTimeField(_("updated"), auto_now=True)

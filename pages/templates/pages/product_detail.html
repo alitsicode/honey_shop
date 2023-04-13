@@ -4,6 +4,7 @@
 {% load comment_tags %}
 
 {% block title %}{{product.title}}{% endblock title %}
+{% block meta_description %}{{product.description}}{% endblock meta_description %}
 
 {% block content %}
 <!--  ************************* Page Title Starts Here ************************** -->
@@ -11,7 +12,7 @@
         <div class="container">
             <div class="row">
                 <h2 class="text-start">{{product.title}} </h2>
-                <a class='text-start' href="{% url 'product_category' product.id %}">{% trans "category" %} :<span class='text-danger '> {{product.category.first.title}}</span>
+                <a title='product of this category' class='text-start' href="{% url 'product_category' product.id %}">{% trans "category" %} :<span class='text-danger '> {{product.category.first.title}}</span>
                 </a>
             </div>
         </div>
@@ -25,8 +26,8 @@
             <div class="col-md-5 p-5 text-center">
                 <img class='mb-3' style='border-radius:10px;' src="{{product.image.url}}" alt="{{product.title}} photo">
                 {% if request.user.is_superuser %}
-                <span class='me-2'><a class='btn btn-info text-white rounded-pill px-3' href="{% url 'product_update' product.id %}">{% trans "Edit" %}</a></span>
-                <span><a class='btn btn-danger rounded-pill px-3' href="{% url 'product_delete' product.id %}">{% trans "delete" %}</a></span>
+                <span class='me-2'><a title='edit this profile' class='btn btn-info text-white rounded-pill px-3' href="{% url 'product_update' product.id %}">{% trans "Edit" %}</a></span>
+                <span><a title='delete this profile' class='btn btn-danger rounded-pill px-3' href="{% url 'product_delete' product.id %}">{% trans "delete" %}</a></span>
                 {% endif %}
             </div>
             <div class="col-md-7">
@@ -36,24 +37,24 @@
                     <h2>{% trans "out of exist !" %}</h2>
                 {% endif %}
                 {% if product.is_discount %}
-                    <strong class="fs-3 py-4 text-danger"> {% trans "$" %}{{product.price_with_discount}} </strong>
-                    <span class="fs-5 ps-3 text-decoration-line-through">{% trans "$" %}{{product.price}}</span>
+                    <strong class="fs-3 py-4 text-danger"> {% trans "$" %}  {{product.price_with_discount}} </strong>
+                    <span class="fs-5 pe-3 text-decoration-line-through">{% trans "$" %}  {{product.price}}</span>
                 {% else %}
-                    <span class="fs-5 ps-3">{% trans "$" %}{{product.price}}</span>
+                    <span class="fs-5 pe-3">{% trans "$" %}  {{product.price}}</span>
                 {% endif %}
                 <ul class="mt-0 mt-2 mb-3 vgth">
                     <li class="float-end gvi">
                         {% if liked %}
-                        <a onclick= "like('{{product.id}}')"><i id='like' class="fa-solid fa-heart fa-lg text-danger "></i></a>
+                        <a title='unlike' onclick= "like('{{product.id}}')"><i id='like' class="fa-solid fa-heart fa-lg text-danger "></i></a>
                         {% else %}
-                        <a onclick= "like('{{product.id}}')"><i id='like' class="fa-regular fa-heart fa-lg"></i></a>
+                        <a title='like' onclick= "like('{{product.id}}')"><i id='like' class="fa-regular fa-heart fa-lg"></i></a>
                         {% endif %}
                     </li><br>
                     <li class="float-end gvi mt-2">
                         {% if saved %}
-                        <a onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-solid fa-bookmark fa-lg me-1 "></i></a>
+                        <a title='remove from save' onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-solid fa-bookmark fa-lg me-1 "></i></a>
                         {% else %}
-                        <a onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-regular fa-bookmark fa-lg me-1 "></i></a>
+                        <a title='save' onclick= "bookmark('{{product.id}}')"><i id='bookmark' class="fa-regular fa-bookmark fa-lg me-1 "></i></a>
                         {% endif %}
                     </li>
                 </ul>

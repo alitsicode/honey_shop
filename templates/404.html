@@ -6,6 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="{% trans "404 not found page" %}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
@@ -159,7 +160,7 @@
                 </div>
                 <h2>{% trans "Page not found" %}</h2>
                 <p>{% trans "The page you are looking for might have been removed had its name changed or is temporarily unavailable." %}</p>
-                <a href="{% url 'home' %}">{% trans "home page" %}</a>
+                <a title='home page' href="{% url 'home' %}">{% trans "home page" %}</a>
             </div>
         </div>
 
